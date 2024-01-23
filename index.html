@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest clone</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: rgba(0, 0, 0, 0.63);
+        }
+
+        nav ul li button {
+            height: 40px;
+            width: 80px;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding-left: 10px;
+            outline: none;
+        }
+
+        nav ul li button:hover {
+            background-color: red;
+            cursor: pointer;
+        }
+
+        .main {
+            padding-top: 70px;
+            height: 400px;
+        }
+
+        .main h1 {
+            line-height: 45px;
+            text-align: center;
+            color: darkgoldenrod;
+        }
+
+        .para {
+            padding: 25px;
+            text-align: center;
+            background-color: rgba(184, 135, 11, 0.623);
+            font-size: 18px;
+        }
+
+        .content {
+            padding-top: 65px;
+            background-color: rgba(184, 135, 11, 0.623);
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .leftsection {
+            padding-left: 50px;
+        }
+
+        .rightsection {
+            font-size: 1.70rem;
+            color: brown;
+        }
+
+        .rightsection p {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.50rem;
+        }
+
+        .rightsection a {
+            text-decoration: none;
+            border: 2px solid brown;
+            background-color: brown;
+            border-radius: 15px;
+            color: black;
+            padding: 5px;
+            margin-left: 220px;
+        }
+
+        .rightsection a:hover{
+            color: rgba(255, 255, 255, 0.836);
+        }
+
+        .container {
+            padding-top: 65px;
+            background-color: lightcyan;
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .left {
+            font-size: 1.70rem;
+            color: rgba(0, 100, 0, 0.822);
+        }
+
+        .left p {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.50rem;
+        }
+
+        .left a {
+            text-decoration: none;
+            border: 2px solid rgba(0, 100, 0, 0.822);
+            background-color: rgba(0, 100, 0, 0.822);
+            border-radius: 15px;
+            color: black;
+            padding: 5px;
+            margin-left: 200px;
+        }
+
+        .left a:hover{
+            color: rgba(255, 255, 255, 0.836);
+        }
+
+        .hero {
+            padding-top: 65px;
+            background-color: pink;
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .right1 {
+            font-size: 1.70rem;
+            color: crimson;
+            text-align: center;
+        }
+
+        .right1 p {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.50rem;
+        }
+
+        .right1 a {
+            text-decoration: none;
+            border: 2px solid crimson;
+            background-color: crimson;
+            border-radius: 15px;
+            color: black;
+            padding: 5px;
+        }
+
+        .right1 a:hover{
+            color: rgba(255, 255, 255, 0.836);
+        }
+
+        .signup-page {
+            background-color: rgba(102, 205, 171, 0.795);
+            padding-top: 60px;
+            height: 670px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .left2 {
+            font-size: 1.70rem;
+            color: crimson;
+            text-align: left;
+        }
+
+        .right2 {
+            border: 2px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .right2 input{
+            border: 2px solid white;
+            height: 30px;
+            width: 200px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .right2 a {
+            text-decoration: none;
+            border: 2px solid crimson;
+            background-color: crimson;
+            border-radius: 15px;
+            color: black;
+            padding: 7px;
+        }
+
+        .right2 a:hover{
+            color: rgba(255, 255, 255, 0.836);
+        }
+
+        footer {
+            background-color: rgba(128, 128, 128, 0.671);
+            height: 50px;
+            padding-top: 25px;
+        }
+
+        footer li {
+            display: inline;
+            padding: 8px;
+            margin-left: 20px;
+        }
+
+        footer li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        footer li a:hover{
+            color: rgba(255, 255, 255, 0.836);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left0">
+                <ul>
+                    <li><img src="Pinterest Logo.png" width="150px"></a></li>
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="right0">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><button>Login</button></li>
+                    <li><button>Signup</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>GET YOUR NEXT</h1>
+        <h1><span class="element"></span></h1>
+    </div>
+
+    <div class="para">
+        <p>Here's How It Works</p>
+    </div>
+    <div class="content">
+
+        <div class="leftsection">
+            <img src="Food.jpeg" width="400px" height="400px" alt="Image">
+        </div>
+        <div class="rightsection">
+            <h1>Search For An Idea</h1>
+            <p>What Do You Want To Try Next ?<br> Think Of Something You're Into - such As <br>
+                'Easy Veg Dinner' And See <br> What You Find.
+            </p><br>
+
+            <a href="#">Explore</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+
+        <div class="left">
+            <h1>Save Ideas You Like</h1>
+            <p>Collect Your Favourites So You Can <br>Get Back To Them Later.</p><br>
+
+            <a href="#">Explore</a>
+        </div>
+        <div class="right">
+            <img src="Furniture.webp" width="400px" height="400px" alt="Image">
+        </div>
+    </div>
+    </div>
+
+    <div class="hero">
+        <div class="left1">
+            <img src="Makeup.webp" width="500px" height="400px" alt="Image">
+        </div>
+        <div class="right1">
+            <h1>See It, Make It, <br>
+                Try It, Do it.</h1> <br>
+            <p>The Best Part Of Pinterest is Discovering <br> New Thing And Ideas From People <br> Around The World
+            </p><br>
+
+            <a href="#">Explore</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="signup-page">
+
+        <div class="left2">
+            <h1>Sign Up <br>
+                To Get <br>
+                Your Ideas.</h1>
+
+        </div>
+        <div class="right2">
+            <img src="P.png" width="50px" height="50px" alt="Image"><br>
+            <h2>Welcome To Pinterest</h2><br><br>
+
+            <label for="Email">Email Address:</label><br><br>
+            <input type="text" placeholder="Enter Your Email"><br><br>
+
+            <label for="Passward">Passward:</label><br><br>
+            <input type="text" placeholder="Create A Passward"><br><br>
+
+            <label for="Date Of Birth:">Date Of Birth:</label><br><br>
+            <input type="text" placeholder="dd/mm/yy"><br><br><br>
+
+            <a href="#">Continue</a><br><br>
+            <p>OR</p><br>
+            <a href="#">Contine With Facebook</a>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">Terms Of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">iphone App</a></li>
+            <li><a href="#">Android App</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#"> Shoping</a></li>
+            <li><a href="#">Today</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#"> Shop</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.element', {
+            strings: ["HOME DECOR IDEA.", "CHAI TIME SNACKS IDEA.", "OUTFIT IDEA.", "DIY IDEA."],
+            typeSpeed: 70,
+        });
+    </script>
+</body>
+
+</html>
